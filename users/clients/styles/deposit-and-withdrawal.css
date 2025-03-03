@@ -1,0 +1,74 @@
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.container > div {
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.available-balance {
+  background-color: rgb(87, 143, 202, 0.25);
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.container div > p > span {
+  font-weight: bold;
+}
+
+.credit-card-form {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+form {
+  margin-top: 15px;
+}
+
+form > div {
+  margin-bottom: 15px;
+}
+
+.credit-card-date-cvv {
+  gap: 15px;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+.credit-card-date-cvv > div {
+  flex: 1;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.deposit-or-withdrawal {
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.deposit-or-withdrawal > div {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  align-items: center;
+}
+
+.deposit-or-withdrawal > div > input {
+  margin: 5px;
+  width: fit-content;
+}
