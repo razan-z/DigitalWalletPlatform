@@ -12,13 +12,38 @@ form > div {
 }
 
 form input {
+  box-sizing: border-box;
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-top: 5px;
 }
 
+.change-password-container {
+  border-top: 1px solid #ccc;
+}
+.change-password-container > .title {
+  margin-top: 20px;
+}
 button {
   width: 200px;
-  margin-top: 20px;
+  margin: 10px 0 20px 0;
+}
+
+.verification-type {
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.verification-type > div {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  align-items: center;
+}
+.verification-type > div > input {
+  margin: 5px;
+  width: fit-content;
 }

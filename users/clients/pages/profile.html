@@ -30,18 +30,43 @@
               <input type="tel" id="phone" name="phone" />
             </div>
 
-            <div>
-              <label for="address">Address</label>
-              <input id="address" name="address" />
-            </div>
-
-            <div>
-              <label for="dob">Date of Birth</label>
-              <input type="date" id="dob" name="dob" />
+            <label for="verification">Verification type</label>
+            <div class="flex verification-type">
+              <div class="flex center">
+                <input
+                  type="radio"
+                  name="verification-type"
+                  id="individual"
+                  value="individual"
+                  checked
+                />
+                <label for="individual">Individual</label>
+              </div>
+              <div class="flex center">
+                <input
+                  type="radio"
+                  name="verification-type"
+                  id="corporate"
+                  value="corporate"
+                />
+                <label for="withdrawal">Corporate</label>
+              </div>
             </div>
 
             <button type="submit" class="primary-btn">Save Changes</button>
           </form>
+
+          <!-- security and password change -->
+          <div class="change-password-container">
+            <h3 class="title">Security Settings</h3>
+            <form action="" method="post">
+              <div style="margin-top: 20px">
+                <label for="new-password">Enter your new password</label>
+                <input type="password" id="new-password" name="new-password" />
+              </div>
+              <button class="primary-btn">Change Password</button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
