@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PayWallet - Transfer</title>
+    <link rel="stylesheet" href="../../styles/bases.css" />
+    <link rel="stylesheet" href="../../styles/colors.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/transfer.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <h1 class="title blue-txt">Transfer Money</h1>
+        <div class="available-balance">
+          <div>
+            <h2>Available Balance</h2>
+            <p>$500.00</p>
+          </div>
+          <div>
+            <select>
+              <option value="USD" selected>USD</option>
+              <option value="LBP">LBP</option>
+            </select>
+          </div>
+        </div>
+
+        <form action="" method="post">
+          <div>
+            <label for="recipient">Recipient</label>
+            <input
+              type="text"
+              id="recipient"
+              name="recipient"
+              placeholder="Email or phone number"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="amount">Amount</label>
+            <div class="flex center transfer-amount">
+              <span>$</span>
+              <input
+                type="number"
+                id="amount"
+                name="amount"
+                min="0.01"
+                step="0.01"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="transfer-type">
+            <h3>Transfer Type</h3>
+            <div>
+              <input
+                type="radio"
+                id="P2P"
+                name="transfer_type"
+                value="instant"
+                checked
+              />
+              <label for="P2P">Instant Transfer</label>
+              <p>Fee: $1.00</p>
+            </div>
+          </div>
+
+          <div class="transfer-summary">
+            <h3>Transfer Summary</h3>
+            <div>
+              <div class="flex space-between">
+                <span>Amount:</span>
+                <span>$0.00</span>
+              </div>
+              <div class="flex space-between">
+                <span>Fee:</span>
+                <span>$1.00</span>
+              </div>
+              <div class="flex space-between total">
+                <span>Total:</span>
+                <span>$1.00</span>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="primary-btn">Send Money</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

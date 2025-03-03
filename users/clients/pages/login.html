@@ -3,66 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>PayWallet - Login</title>
     <link rel="stylesheet" href="../../styles/bases.css" />
     <link rel="stylesheet" href="../../styles/colors.css" />
-    <link rel="stylesheet" href="../styles/login-signup-style.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
   </head>
   <body>
-    <!-- Login Section -->
-    <section>
-      <div>
+    <div class="container">
+      <!-- Hero secton on the left -->
+      <section class="hero-section">
         <img
-          src="../../assets/images/PayWallet Logo.png"
+          src="../assets/images/PayWallet.png"
           alt="PayWallet Logo"
           class="PayWallet-logo"
         />
-        <div class="login-signup-container">
-          <!-- Mannual Login section -->
-          <div>
-            <h2 class="title">Login</h2>
-            <form action="" method="post">
-              <label for="contact">Email or Phone number</label>
-              <input type="text" name="contact" id="contact" required />
-              <label for="password">Password</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="at least 8 characters"
-                required
-              />
-              <label for="password-verification">Re-enter password</label>
-              <input
-                type="password"
-                name="password-verification"
-                id="password-verification"
-                required
-              />
-              <button class="secondary-bg" type="submit">Login</button>
-            </form>
-          </div>
-          <!-- End Mannual Login section -->
+
+        <h1 class="title">Welcome to PayWallet</h1>
+        <p>
+          Secure, fast, and easy payments at your fingertips. Join us today!
+        </p>
+      </section>
+      <!-- End of hero section -->
+
+      <!-- Login Section on the right -->
+      <section class="login-section">
+        <div class="login-container">
+          <h2 class="title login">Login</h2>
+          <!-- Manual login -->
+          <form action="" method="post">
+            <label for="contact">Email or Phone number</label>
+            <input type="text" name="contact" id="contact" required />
+
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="At least 8 characters"
+              required
+            />
+
+            <button class="primary-btn" type="submit">Login</button>
+          </form>
+          <!-- End of manual login section -->
 
           <p class="divider">or continue with</p>
 
-          <!-- login with social media section -->
+          <!-- login with social meidia -->
           <div class="social-media-container">
             <div class="social-media-icons">
-              <img src="../../assets/icons/google.svg" alt="google logo" />
+              <img src="../assets/icons/google.svg" alt="Google logo" />
             </div>
             <div class="social-media-icons">
-              <img src="../../assets/icons/facebook.svg" alt="facebook logo" />
+              <img src="../assets/icons/facebook.svg" alt="Facebook logo" />
             </div>
             <div class="social-media-icons">
-              <img src="../../assets/icons/x.svg" alt="x" />
+              <img src="../assets/icons/x.svg" alt="X logo" />
             </div>
           </div>
-          <!-- End of login with social media section -->
-          <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+          <!-- End of login with social media -->
+          <p class="signup-text">
+            Don't have an account? <a href="signup.html">Sign up</a>
+          </p>
         </div>
-      </div>
-    </section>
-    <!-- End of Login Section -->
+      </section>
+      <!-- End of login section -->
+    </div>
   </body>
 </html>

@@ -6,18 +6,18 @@
     <title>Signup</title>
     <link rel="stylesheet" href="../../styles/bases.css" />
     <link rel="stylesheet" href="../../styles/colors.css" />
-    <link rel="stylesheet" href="../styles/login-signup-style.css" />
+    <link rel="stylesheet" href="../styles/signup.css" />
   </head>
   <body>
     <!-- Signup Section -->
     <section>
       <div>
         <img
-          src="../../assets/images/PayWallet Logo.png"
+          src="../assets/images/PayWallet.png"
           alt="PayWallet Logo"
           class="PayWallet-logo"
         />
-        <div class="login-signup-container">
+        <div class="signup-container">
           <!-- Mannual Signup section -->
           <div>
             <h2 class="title">Sign Up</h2>
@@ -32,7 +32,15 @@
                 placeholder="at least 8 characters"
                 required
               />
-              <button class="secondary-bg" type="submit">Sign up</button>
+              <label for="password-verification">Re-enter your Password</label>
+              <input
+                type="password"
+                name="password-verification"
+                id="password-verification"
+                required
+              />
+
+              <button class="primary-btn" type="submit">Sign up</button>
             </form>
           </div>
           <!-- End Mannual Signup section -->
@@ -42,13 +50,13 @@
           <!-- signup with social media section -->
           <div class="social-media-container">
             <div class="social-media-icons">
-              <img src="../../assets/icons/google.svg" alt="google logo" />
+              <img src="../assets/icons/google.svg" alt="google logo" />
             </div>
             <div class="social-media-icons">
-              <img src="../../assets/icons/facebook.svg" alt="facebook logo" />
+              <img src="../assets/icons/facebook.svg" alt="facebook logo" />
             </div>
             <div class="social-media-icons">
-              <img src="../../assets/icons/x.svg" alt="x" />
+              <img src="../assets/icons/x.svg" alt="x" />
             </div>
           </div>
           <!-- End of signup with social media section -->

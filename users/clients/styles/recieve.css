@@ -1,0 +1,46 @@
+.container {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.container > p {
+  margin: 10px;
+}
+
+.request-amount-container {
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+}
+form > div {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+span {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}

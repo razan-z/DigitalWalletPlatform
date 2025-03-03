@@ -1,0 +1,107 @@
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+}
+
+.PayWallet-logo {
+  display: block;
+  margin: 0 auto;
+  height: 60px;
+}
+
+.title {
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+
+.signup-container {
+  padding: 16px;
+}
+
+label {
+  padding: 0 0 2px 2px;
+  margin-bottom: 2px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #cccccc;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  width: 100%;
+  margin: 15px auto 0 auto;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+button:hover {
+  background-color: #4682b4;
+}
+
+.divider {
+  margin: 15px;
+  font-size: small;
+  text-align: center;
+}
+
+.social-media-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-media-icons {
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+  color: black;
+  background-color: rgb(87, 143, 202, 0.25);
+  border-radius: 50%;
+}
+
+.social-media-icons:hover {
+  background-color: rgba(145, 196, 251, 0.25);
+}
+
+.signup-container > p {
+  margin-top: 15px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .login-signup-container {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section {
+    max-width: 500px;
+  }
+}

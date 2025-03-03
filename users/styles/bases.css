@@ -41,8 +41,23 @@
 
 body {
   font-family: "Roboto-Regular", sans-serif;
+  background-color: #f4f4f4;
+  height: 100vh;
+  font-size: 14px;
 }
 
 .title {
   font-family: "Poppins-SemiBold", serif;
+}
+
+.primary-btn {
+  border-radius: 5px;
+  background: #3674b5;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+button:hover .primary-btn {
+  background-color: #4682b4;
 }

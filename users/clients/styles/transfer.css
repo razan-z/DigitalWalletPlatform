@@ -1,0 +1,101 @@
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+.title {
+  font-size: xx-large;
+}
+.available-balance {
+  background-color: rgb(87, 143, 202, 0.25);
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.available-balance p {
+  font-size: 24px;
+  font-weight: bold;
+}
+select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+}
+
+form {
+  margin-top: 30px;
+  width: 100%;
+}
+
+form > div {
+  margin-bottom: 20px;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+form > div > input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.transfer-amount > span {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.transfer-amount > input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.transfer-type > div {
+  margin-top: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.transfer-type p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.transfer-summary {
+  margin: 30px 0;
+}
+
+.transfer-summary > div {
+  margin-top: 10px;
+  border-top: 1px solid #cccccc;
+  padding-top: 10px;
+}
+
+.transfer-summary > div > div {
+  margin-bottom: 5px;
+}
+
+.total {
+  font-weight: bold;
+  margin-top: 5px;
+  border-top: 1px solid #cccccc;
+  padding-top: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}

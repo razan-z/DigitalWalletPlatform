@@ -1,0 +1,172 @@
+body {
+  line-height: 1.5em;
+  scrollbar-width: 0;
+}
+
+header {
+  background-color: white;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  padding: 5px 10px;
+  height: 50px;
+}
+
+.paywallet-logo {
+  width: 15%;
+  height: 100%;
+}
+
+.paywallet-logo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+ul {
+  list-style: none;
+}
+
+header ul {
+  width: 65%;
+  justify-content: center;
+  gap: 10%;
+}
+
+a {
+  text-decoration: none;
+}
+
+header ul a {
+  color: black;
+}
+
+.navbar-buttons {
+  width: 20%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.primary-btn {
+  padding: 0.5em;
+}
+
+.logout-btn {
+  border: 1px solid #3674b5;
+  background-color: white;
+  color: #3674b5;
+  margin-left: 15px;
+}
+
+main {
+  margin: 10px 15px;
+}
+
+.validation-status-container {
+  padding: 10px 15px;
+  border: 2px solid #3674b5;
+  border-radius: 5px;
+  background-color: rgb(87, 143, 202, 0.25);
+  gap: 20px;
+}
+.validation-status-container > div {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.validation-status-container > img {
+  width: 14px;
+}
+
+.container {
+  width: 50%;
+  margin: 20px 5px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+}
+
+.main-container {
+  flex-grow: 1;
+  gap: 20px;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.features li {
+  background-color: #3674b5;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.features li a {
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.features li:hover {
+  background-color: #4682b4;
+}
+
+.balance-wallet {
+  align-items: center;
+}
+
+.wallet {
+  font-size: xx-large;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px 15px;
+  margin: 5px 10px 20px;
+  align-items: center;
+}
+
+.wallet > div {
+  width: 50%;
+}
+.wallet p {
+  margin-left: 30%;
+  width: 100%;
+}
+
+.wallet select {
+  background-color: whitesmoke;
+  font-size: medium;
+  border: 1px solid rgb(218, 216, 216);
+  padding: 2px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: block;
+  justify-self: center;
+}
+.balance {
+  border-top: 0.25px solid grey;
+}
+.balance > p {
+  margin: 20px 0;
+  font-size: xx-large;
+  font-weight: bold;
+}
+.balance-amount {
+  font-weight: bolder;
+}
