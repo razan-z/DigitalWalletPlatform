@@ -10,7 +10,7 @@ class User
 
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        $query = "insert int" . self::$table_name . "(name.eamil,phone,password) values (?,?,?,?)";
+        $query = "insert into" . self::$table_name . "(name.eamil,phone,password) values (?,?,?,?)";
         $stmt = $GLOBALS['conn']->prepare($query);
 
         $stmt->bind_param("ssis", $name, $email, $phone, $hashed_password);
@@ -42,7 +42,7 @@ class User
     public static function update($id, $name, $phone, $email, $verification_status, $password)
     {
 
-        $query = "update " . self::$table_name . "set name = ?, phone = ?, email = ?, verification_status = ?, password = ? where id = ?";
+        $query = "update " . self::$table_name . " set name = ?, phone = ?, email = ?, verification_status = ?, password = ? where id = ?";
         $stmt = $GLOBALS['conn']->prepare($query);
         $stmt->bind_param("sisssi", $name, $phone, $email, $verification_status, $password, $id);
         return $stmt->execute();
