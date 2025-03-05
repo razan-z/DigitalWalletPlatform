@@ -35,8 +35,6 @@ class Wallet
         $query = "update " . self::$table_name . " set balance = ? where id = ? and currency = ?";
         $stmt = $GLOBALS['conn']->prepare($query);
         $stmt->bind_param("isd", $balance, $balance, $id);
-        if ($stmt->execute())
-            return $GLOBALS['conn']->insert_id;
-        return false;
+        return $stmt->execute();
     }
 }

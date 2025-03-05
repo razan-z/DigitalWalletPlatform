@@ -1,7 +1,9 @@
 <?php
 require("../../connection/connection.php");
-require("../classes/User.php");
-require("../classes/Wallet.php");
+header("Access-Control-Allow-Origin:*");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: *");
+header("Content-Type: application/json;charset=UTF-8");
 
 if (!isset($_POST['email']) || !isset($_POST['phone']) || !isset($_POST['password'])) {
     http_response_code(400);
@@ -33,8 +35,6 @@ if ($result->num_rows > 0) {
     $stmt = $conn->prepare($query);
     $stmt->bind_param("siss", $email, $phone, $hashed_password, $token);
     $stmt->execute();
-
-
     echo json_encode([
         "status" => "success",
         "token" => $token,
