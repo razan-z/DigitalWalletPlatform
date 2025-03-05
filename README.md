@@ -7,9 +7,9 @@
 ## Hosting Details: ##
 ### Github pages URL: ###
 **Login Page**: [login](https://razan-z.github.io/DigitalWalletPlatform/) <br />
-**Signup page:**: [signup](https://razan-z.github.io/DigitalWalletPlatform/clients/pages/signup.html) <br />
+**Signup page:** [signup](https://razan-z.github.io/DigitalWalletPlatform/clients/pages/signup.html) <br />
 **Home Page:** [home](https://razan-z.github.io/DigitalWalletPlatform/clients/pages/home.html)<br />
-**Progile:** [profile](https://razan-z.github.io/DigitalWalletPlatform/clients/pages/profile.html)<br />
+**Profile:** [profile](https://razan-z.github.io/DigitalWalletPlatform/clients/pages/profile.html)<br />
 **Receive Money Page:** [receive](https://razan-z.github.io/DigitalWalletPlatform/clients/pages/receive.html)<br />
 **Transfer Monery Page:** [transfer](https://razan-z.github.io/DigitalWalletPlatform/clients/pages/transfer.html)<br />
 **Deposit or Withdrawal Page:** [Deposit/Withdrawal](https://razan-z.github.io/DigitalWalletPlatform/clients/pages/deposit-and-withdrawal.html)<br />
