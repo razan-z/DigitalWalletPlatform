@@ -1,20 +1,31 @@
 <?php
 require("../connection/connection.php");
+require("./wallet.php");
 
 class User
 {
-
-    private static $table_name = "users";
-
     public static function create($email, $phone, $password)
     {
+        $query = "SELECT * FROM users WHERE email = ? AND phone = ?";
+        $stmt = $GLOBALS['conn']->prepare($query);
+        $stmt->bind_param("ss", $email, $phone);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if ($result->num_rows > 0) {
+            return [
+                "status" => "error",
+                "message" => "Email or phone number have already been used"
+            ];
+        }
+
 
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+
         $token = bin2hex(random_bytes(32));
 
-        $query = "INSERT INTO " . self::$table_name . " (email, phone, password, token) VALUES (?,?,?,?)";
+        $query = "INSERT INTO users (email, phone, password, token) VALUES (?,?,?,?)";
         $stmt = $GLOBALS['conn']->prepare($query);
-
         $stmt->bind_param("siss",  $email, $phone, $hashed_password, $token);
         if ($stmt->execute()) {
             $user_id = $GLOBALS['conn']->insert_id;
@@ -46,7 +57,7 @@ class User
     public static function read($id)
     {
 
-        $query = "select * from " . self::$table_name . " where id = ?";
+        $query = "select * from users where id = ?";
 
         $stmt = $GLOBALS['conn']->prepare($query);
         $stmt->bind_param('i', $id);
@@ -63,10 +74,11 @@ class User
 
     public static function update($id, $name, $phone, $email, $verification_status, $password)
     {
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        $query = "update " . self::$table_name . " set name = ?, phone = ?, email = ?, verification_status = ?, password = ? where id = ?";
+        $query = "update users set name = ?, phone = ?, email = ?, verification_status = ?, password = ? where id = ?";
         $stmt = $GLOBALS['conn']->prepare($query);
-        $stmt->bind_param("sisssi", $name, $phone, $email, $verification_status, $password, $id);
+        $stmt->bind_param("sisssi", $name, $phone, $email, $verification_status, $hashed_password, $id);
         return $stmt->execute();
     }
 }

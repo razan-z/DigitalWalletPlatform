@@ -11,7 +11,7 @@ if (!$token) {
     exit();
 }
 
-$stmt = $conn->prepare("SELECT id, email, verification_status FROM users WHERE token = ?");
+$stmt = $conn->prepare("SELECT id, verification_status FROM users WHERE token = ?");
 $stmt->bind_param("s", $token);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -36,10 +36,9 @@ while ($row = $result->fetch_assoc()) {
         "balance" => $row["balance"]
     ];
 }
-echo json_encode([
+return json_encode([
     "status" => "success",
     "user" => [
-        "email" => $user["email"],
         "verified" => $user["verification_status"],
         "wallets" => $wallets
     ]

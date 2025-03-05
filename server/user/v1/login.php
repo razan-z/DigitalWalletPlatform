@@ -1,7 +1,7 @@
 <?php
 include("../../connection/connection.php");
 
-if (!isset($_POST['password']) || (!isset($_POST['email']) || !isset($_POST['phone']))) {
+if (!isset($_POST['password']) || !isset($_POST['email']) || !isset($_POST['phone'])) {
     http_response_code(400);
 
     echo json_encode([
@@ -13,8 +13,6 @@ if (!isset($_POST['password']) || (!isset($_POST['email']) || !isset($_POST['pho
 $password = $_POST['password'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
-
-
 
 $query = "SELECT * FROM users WHERE email = ? AND phone = ?";
 $stmt = $conn->prepare($query);

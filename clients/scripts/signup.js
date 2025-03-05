@@ -17,23 +17,22 @@ signupBtn.addEventListener("click", async () => {
             form,
             {
                 headers: {
-                    "Content-Type": "multipart/form-data", // Ensure correct content type
+                    "Content-Type": "multipart/form-data",
                 },
             }
         );
 
-        // Handle the response
         if (response.data.status === "success") {
             localStorage.setItem("token", response.data.token);
             window.location.href = "../pages/home.html";
         } else {
-            alert("Registration failed: " + (response.data.message || "Unknown error"));
+            alert("Registration failed: " + (response.data.message));
         }
     } catch (error) {
         console.error("Error during registration:", error);
         alert("Network error. Please try again.");
     } finally {
-        // Re-enable the button after the request completes
+
         signupBtn.disabled = false;
     }
 });

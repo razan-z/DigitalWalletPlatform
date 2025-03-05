@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     try {
 
-        const response = await axios.get(
+        const response = await axios.post(
             'http://localhost/DigitalWalletPlatform/server/user/v1/home.php',
             {
                 headers: {
@@ -32,15 +32,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const selectedWallet = user.wallets.find(wallet => wallet.currency === selectedCurrency);
 
                 if (selectedWallet) {
-                    balanceAmount.textContent = selectedCurrency === 'USD' ? `$${selectedWallet.NUMBER(balance)}` : `${selectedWallet.NUMBER(balance)} LBP`;
+                    balanceAmount.textContent = selectedCurrency == 'USD' ? `$${selectedWallet.balance.toFixed(2)}` : `${selectedWallet.balance.toFixed(2)} LBP`;
+
                 } else {
-                    balanceAmount.textContent = selectedCurrency === 'USD' ? '$0.00' : '0.00 LBP';
+                    balanceAmount.textContent = selectedCurrency == 'USD' ? '$0.00' : '0.00 LBP';
                 }
             };
 
             updateBalance();
 
             currencySelector.addEventListener('change', updateBalance);
+
         }
     } catch (error) {
         console.error('Error fetching user data:', error);
