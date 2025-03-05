@@ -1,0 +1,35 @@
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.identity-verification {
+  margin-top: 30px;
+}
+
+.identity-verification > p {
+  margin: 10px 0;
+}
+
+.drag-and-drop-section {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.drag-and-drop-section > button {
+  width: 150px;
+  margin: 10px auto;
+}
+
+.drag-and-drop-section > p {
+  font-size: 12px;
+  color: #666;
+}
+
+.container > button {
+  width: 200px;
+  margin: 30px 0;
+}

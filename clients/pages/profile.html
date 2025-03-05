@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PayWallet - Profile</title>
+    <link rel="stylesheet" href="../styles/bases.css" />
+    <link rel="stylesheet" href="../styles/colors.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/profile.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <h2 class="title">Profile Information</h2>
+        <div>
+          <form action="" method="post">
+            <div>
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" name="fullname" />
+            </div>
+
+            <div>
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" />
+            </div>
+
+            <div>
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <label for="verification">Verification type</label>
+            <div class="flex verification-type">
+              <div class="flex center">
+                <input
+                  type="radio"
+                  name="verification-type"
+                  id="individual"
+                  value="individual"
+                  checked
+                />
+                <label for="individual">Individual</label>
+              </div>
+              <div class="flex center">
+                <input
+                  type="radio"
+                  name="verification-type"
+                  id="corporate"
+                  value="corporate"
+                />
+                <label for="withdrawal">Corporate</label>
+              </div>
+            </div>
+
+            <button type="submit" class="primary-btn">Save Changes</button>
+          </form>
+
+          <!-- security and password change -->
+          <div class="change-password-container">
+            <h3 class="title">Security Settings</h3>
+            <form action="" method="post">
+              <div style="margin-top: 20px">
+                <label for="new-password">Enter your new password</label>
+                <input type="password" id="new-password" name="new-password" />
+              </div>
+              <button class="primary-btn">Change Password</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

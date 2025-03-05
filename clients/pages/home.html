@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PayWallet - Home</title>
+    <link rel="stylesheet" href="../styles/bases.css" />
+    <link rel="stylesheet" href="../styles/colors.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="flex space-between center">
+        <div class="paywallet-logo">
+          <img src="../assets/images/PayWallet.png" alt="PayWallet Logo" />
+        </div>
+        <ul class="flex">
+          <li>
+            <p>
+              <a href="home.html">Home</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="profile.html">Profile</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="faqs.html">FAQs</a>
+            </p>
+          </li>
+        </ul>
+        <div class="navbar-buttons">
+          <a href="contact-support.html"
+            ><button class="primary-btn">Contact Support</button></a
+          >
+          <a href="login.html"
+            ><button class="primary-btn logout-btn">Logout</button></a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- validation warning -->
+      <section>
+        <div class="flex center validation-status-container">
+          <img
+            src="../assets/icons/circle-exclamation.svg"
+            alt="circle-exclamation"
+          />
+          <div>
+            <h2>Verification Required!</h2>
+            <p>
+              Verify your account to access your wallet and unlock all features.
+            </p>
+          </div>
+          <a href="verification.html"
+            ><button class="center primary-btn">Get Verified Now</button></a
+          >
+        </div>
+      </section>
+      <!-- end of validation warning -->
+
+      <!-- home container -->
+      <section>
+        <div class="flex space-between main-container">
+          <!-- features container -->
+          <ul class="features container flex flex-column">
+            <li>
+              <a href="deposite-and-withdrawal.html">Deposit & Withdrawal</a>
+            </li>
+            <li><a href="transfer.html">Transfer</a></li>
+            <li><a href="recieve.html">Recieve Money</a></li>
+          </ul>
+
+          <!-- end of features container -->
+
+          <!-- Balance container -->
+          <div class="balance-wallet container flex flex-column">
+            <div class="flex wallet">
+              <div>
+                <p>Your Wallet</p>
+              </div>
+              <div>
+                <select name="currency-selector" id="currency-selector">
+                  <option value="USD" selected>USD</option>
+                  <option value="LBP">LBP</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex balance flex-column center">
+              <p>Your Balance</p>
+              <p class="balance-amount">$0.00</p>
+            </div>
+          </div>
+          <!-- end of balance conatiner -->
+        </div>
+      </section>
+      <!-- end home container -->
+    </main>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(../assets/fonts/Poppins/Poppins-Black.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../assets/fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../assets/fonts/Roboto/static/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(../assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../assets/fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-ExtraLight";
+  src: url(../assets/fonts/Poppins/Poppins-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-ExtralightItalic";
+  src: url(../assets/fonts/Poppins/Poppins-ExtraLightItalic.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: "Roboto-Regular", sans-serif;
+  background-color: #f4f4f4;
+  height: 100vh;
+  font-size: 14px;
+}
+
+.title {
+  font-family: "Poppins-SemiBold", serif;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.primary-btn {
+  border-radius: 5px;
+  background: #3674b5;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+button:hover .primary-btn {
+  background-color: #4682b4;
+}
+
+.primary-bg {
+  background-color: #3674b5;
+}
+
+.secondary-bg {
+  background-color: #578fca;
+}
+
+.black-txt {
+  color: #000000;
+}
+
+.white-txt {
+  color: #ffffff;
+}
+
+.blue-txt {
+  color: #3674b5;
+}
+
+.primary-btn {
+  border-radius: 5px;
+  background: #3674b5;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.PayWallet-logo {
+  display: block;
+  margin: 0 auto;
+  height: 60px;
+}
+
+.login-container {
+  padding: 16px;
+}
+
+label {
+  padding: 0 0 2px 2px;
+  margin-bottom: 2px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #cccccc;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  width: 100%;
+  margin: 15px auto 0 auto;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.divider {
+  margin: 15px;
+  font-size: small;
+  text-align: center;
+}
+
+.social-media-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-media-icons {
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+  color: black;
+  background-color: rgb(87, 143, 202, 0.25);
+  border-radius: 50%;
+}
+
+.social-media-icons:hover {
+  background-color: rgba(145, 196, 251, 0.25);
+}
+
+.login-container > p {
+  margin-top: 15px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .login-container {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section {
+    max-width: 500px;
+  }
+}

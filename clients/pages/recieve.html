@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PayWallet - Receive Money</title>
+    <link rel="stylesheet" href="../styles/bases.css" />
+    <link rel="stylesheet" href="../styles/colors.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/recieve.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <h2 class="title blue-txt">Receive Money</h2>
+        <p>Share your Phone Number or email to receive money</p>
+        <div class="request-amount-container">
+          <h3>Request Specific Amount</h3>
+          <form action="" method="post">
+            <div>
+              <label for="request_from">Request From</label>
+              <input
+                type="text"
+                id="request_from"
+                name="request_from"
+                placeholder="Email or phone number"
+              />
+            </div>
+
+            <div>
+              <label for="request_amount">Amount</label>
+              <div class="flex center">
+                <span>$</span>
+                <input
+                  type="number"
+                  id="request_amount"
+                  name="request_amount"
+                  min="0.01"
+                  step="0.01"
+                  placeholder="0.00"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="request_date">Schedule Date</label>
+              <input type="date" id="request_date" name="request_date" />
+            </div>
+            <button type="submit" class="primary-btn">Request Money</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
