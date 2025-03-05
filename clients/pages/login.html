@@ -31,19 +31,17 @@
           <h2 class="title login">Login</h2>
           <!-- Manual login -->
           <form action="" method="post">
-            <label for="contact">Email or Phone number</label>
-            <input type="text" name="contact" id="contact" required />
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" name="phoneNumber" id="phoneNumber" required />
+            <label for="Email">Email</label>
+            <input type="text" name="email" id="email" required />
 
             <label for="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="At least 8 characters"
-              required
-            />
+            <input type="password" name="password" id="password" required />
 
-            <button class="primary-btn" type="submit">Login</button>
+            <button class="primary-btn" id="loginBtn" type="button">
+              Login
+            </button>
           </form>
           <!-- End of manual login section -->
 
@@ -68,6 +66,8 @@
         </div>
       </section>
       <!-- End of login section -->
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="../scripts/login.js"></script>
     </div>
   </body>
 </html>

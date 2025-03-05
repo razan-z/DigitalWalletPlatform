@@ -17,14 +17,13 @@ body {
 
 .hero-section {
   flex: 1;
-  background: linear-gradient(to right, #3674b5, #adc9f5);
-  color: white;
   text-align: center;
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-right: 0.5px solid #cccccc;
 }
 
 .hero-section h1 {
