@@ -25,8 +25,15 @@ $user = $result->fetch_assoc();
 
 try {
     if (password_verify($password, $user["password"])) {
+        $new_token = bin2hex(random_bytes(32));
+
+        $update_stmt = $conn->prepare("UPDATE users SET token=? WHERE id=?");
+        $update_stmt->bind_param("si", $new_token, $user['id']);
+        $update_stmt->execute();
+
         echo json_encode([
-            "user" => $user,
+            "message" => "success",
+            "token" => $new_token
         ]);
     } else {
         http_response_code(401);
