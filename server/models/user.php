@@ -10,14 +10,37 @@ class User
     {
 
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $token = bin2hex(random_bytes(32));
 
-        $query = "INSERT INTO " . self::$table_name . " (email, phone, password) VALUES (?,?,?)";
+        $query = "INSERT INTO " . self::$table_name . " (email, phone, password, token) VALUES (?,?,?,?)";
         $stmt = $GLOBALS['conn']->prepare($query);
 
-        $stmt->bind_param("sis",  $email, $phone, $hashed_password);
-        if ($stmt->execute())
-            return $GLOBALS['conn']->insert_id;
-        return false;
+        $stmt->bind_param("siss",  $email, $phone, $hashed_password, $token);
+        if ($stmt->execute()) {
+            $user_id = $GLOBALS['conn']->insert_id;
+
+            // create 2 wallets for the user
+            $usd_wallet = Wallet::create($user_id, "USD", 0.00);
+            $lbp_wallet = Wallet::create($user_id, "LBP", 0.00);
+
+            if ($usd_wallet && $lbp_wallet) {
+                return [
+                    "status" => "success",
+                    "token" => $token,
+                    "user_id" => $user_id
+                ];
+            } else {
+                return [
+                    "status" => "error",
+                    "message" => "User created, but wallets could not be created"
+                ];
+            }
+        } else {
+            return [
+                "status" => "error",
+                "message" => "Error creating user"
+            ];
+        }
     }
 
     public static function read($id)
@@ -35,7 +58,7 @@ class User
             return $result->fetch_assoc();
         }
 
-        return false;
+        return null;
     }
 
     public static function update($id, $name, $phone, $email, $verification_status, $password)

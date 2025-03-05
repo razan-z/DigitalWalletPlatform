@@ -1,5 +1,7 @@
 <?php
 require("../../connection/connection.php");
+require("../classes/User.php");
+require("../classes/Wallet.php");
 
 if (!isset($_POST['email']) || !isset($_POST['phone']) || !isset($_POST['password'])) {
     http_response_code(400);
@@ -29,8 +31,10 @@ if ($result->num_rows > 0) {
     $token = bin2hex(random_bytes(32));
     $query = "INSERT INTO users (email, phone, password, token) VALUES (?, ?, ?, ?)";
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("ssss", $email, $phone, $hashed_password, $token);
+    $stmt->bind_param("siss", $email, $phone, $hashed_password, $token);
     $stmt->execute();
+
+
     echo json_encode([
         "status" => "success",
         "token" => $token,

@@ -4,7 +4,6 @@ const password = document.getElementById("password");
 const loginBtn = document.getElementById("loginBtn");
 
 loginBtn.addEventListener("click", async () => {
-    event.preventDefault();
     const form = new FormData();
 
     form.append("email", email.value);
@@ -12,14 +11,14 @@ loginBtn.addEventListener("click", async () => {
     form.append("password", password.value);
 
     const response = await axios.post(
-        "http://localhost/DigitalWallletPlatform/server/user/v1/login.php",
+        "http://localhost/DigitalWalletPlatform/server/user/v1/login.php",
         form
     );
 
-    if (response.data.status === "success") {
+    if (response.data.message === "success") {
         localStorage.setItem("token", response.data.token);
         window.location.href = "../pages/home.html";
     } else {
-        alert("Registration failed");
+        alert("Login failed");
     }
 })
