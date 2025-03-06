@@ -17,5 +17,8 @@
 **Admin Login:** [login](https://razan-z.github.io/DigitalWalletPlatform/admins/pages/login-admin.html)<br /> 
 <br/>
 
+**DNS:** [DNS](http://ec2-51-44-155-201.eu-west-3.compute.amazonaws.com/)
+**IP:**  [IP](http://51.44.155.201)
+
 _Project Status:
 The frontend of the project has been implemented with a focus on UI/UX. However, due to time constraints, the backend is incomplete, and some core functionalities are not fully operational.A key takeaway from this experience is the importance of implementing and testing each feature step by step while developing the frontend and backend in parallel. This approach would have helped optimize time and ensure a fully functional system._
