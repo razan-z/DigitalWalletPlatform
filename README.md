@@ -1,6 +1,6 @@
 # Project: Digital Wallet Platform #
 ## ER Diagram: ##
-![Image](https://github.com/user-attachments/assets/aaa72944-10d4-4c85-94ce-0d1e41e19721)
+![Image](https://github.com/user-attachments/assets/16194ca0-4f1d-4d14-973e-c13168e0ac2e)
 ## Components Diagram: ##
 ![Image](https://github.com/user-attachments/assets/74e5b2dd-9f3b-4153-b588-7f07476bfa40)
 
