@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (response.data.status === 'success') {
             const user = response.data.user;
+            const wallets = response.data.user.wallets;
+
+            localStorage.setItem('user', JSON.stringify(user));
+            localStorage.setItem('wallets', JSON.stringify(wallets));
+
             const verificationContainer = document.querySelector('.validation-status-container');
             if (user.verified !== "unverified") {
                 verificationContainer.style.display = 'none';
@@ -29,10 +34,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             const updateBalance = () => {
                 const selectedCurrency = currencySelector.value;
-                const selectedWallet = user.wallets.find(wallet => wallet.currency === selectedCurrency);
+                const selectedWallet = wallets.find(wallet => wallet.currency === selectedCurrency);
 
                 if (selectedWallet) {
-                    balanceAmount.textContent = selectedCurrency == 'USD' ? `$${selectedWallet.balance.toFixed(2)}` : `${selectedWallet.balance.toFixed(2)} LBP`;
+                    balanceAmount.textContent = selectedCurrency == 'USD' ? `$ ${selectedWallet.balance.toFixed(2)}` : `${selectedWallet.balance.toFixed(2)} LBP`;
 
                 } else {
                     balanceAmount.textContent = selectedCurrency == 'USD' ? '$0.00' : '0.00 LBP';
@@ -42,6 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             updateBalance();
 
             currencySelector.addEventListener('change', updateBalance);
+
 
         }
     } catch (error) {

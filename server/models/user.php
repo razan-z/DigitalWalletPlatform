@@ -54,13 +54,13 @@ class User
         }
     }
 
-    public static function read($id)
+    public static function read($token)
     {
 
-        $query = "select * from users where id = ?";
+        $query = "select * from users where token = ?";
 
         $stmt = $GLOBALS['conn']->prepare($query);
-        $stmt->bind_param('i', $id);
+        $stmt->bind_param('s', $token);
         $stmt->execute();
 
         $result = $stmt->get_result();
